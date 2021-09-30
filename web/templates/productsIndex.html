@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+</head>
+<body>
+<table>
+    <thead>
+    <th>Id</th>
+    <th>Model</th>
+    <th>Company</th>
+    <th>Price</th>
+    </thead>
+    {{range . }}
+    <tr>
+        <td>{{.Id}}</td>
+        <td>{{.Model}}</td>
+        <td>{{.Company}}</td>
+        <td>{{.Price}}</td>
+        <td><a href="/edit/{{ .Id}}">Edit</a> |
+            <a href="/delete/{{.Id}}">Delete</a>
+        </td>
+    </tr>
+    {{end}}
+</table>
+<form action="/create">
+    <button type="submit">Add product</button>
+</form>
+</body>
+</html>

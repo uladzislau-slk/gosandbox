@@ -1,0 +1,5 @@
+#Ignore packages
+pkg/
+
+#Ignore IDE specific files
+.idea/
